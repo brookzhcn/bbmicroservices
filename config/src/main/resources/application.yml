@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          basedir: ${HOME}/IdeaProjects/bbmicroservices/config-files
+          basedir: ${HOME}/IdeaProjects/bb-config
 
 #          basedir: config-files
 

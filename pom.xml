@@ -12,6 +12,7 @@
         <module>message</module>
         <module>gateway</module>
         <module>config</module>
+        <module>auth-server</module>
     </modules>
 
 
