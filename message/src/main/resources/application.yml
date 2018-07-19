@@ -1,0 +1,14 @@
+
+server:
+  port: 7000
+
+spring:
+  data:
+    mongodb:
+      host: 127.0.0.1
+  #      username: user
+  #      password: ${MONGODB_PASSWORD}
+      database: microservices
+      port: 27017
+  application:
+    name: message
