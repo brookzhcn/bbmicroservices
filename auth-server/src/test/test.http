@@ -1,0 +1,16 @@
+###
+GET http://localhost:7001/users/current
+
+###
+POST http://localhost:7001/users
+Content-Type: application/json
+
+{
+    "username":"brook",
+    "password":"fighting"
+}
+
+###
+GET http://localhost:7001/users
+
+###

@@ -1,6 +1,6 @@
 package com.yianyouxuan.message.repository;
 import com.yianyouxuan.message.domain.Message;
-import org.springframework.data.mongodb.repository.Query;
+//import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
