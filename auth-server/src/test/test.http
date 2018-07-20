@@ -32,6 +32,12 @@ grant_type=client_credentials&scope=write
 #}
 
 ###
+POST acme:acmesecret@localhost:7001/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=brook&password=fighting
+
+###
 GET acme:acmesecret@localhost:7001/oauth/token?grant_type=client_credentials
 
 ###
