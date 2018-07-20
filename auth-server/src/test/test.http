@@ -12,13 +12,14 @@ Content-Type: application/json
 
 ###
 GET http://localhost:7001/users
+Authorization: Bear 6066d561-0bbe-47df-bb05-aec8cd679cb1
 
 
 ###
 POST acme:acmesecret@localhost:7001/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
-grant_type=client_credentials
+grant_type=client_credentials&scope=read
 
 
 #{

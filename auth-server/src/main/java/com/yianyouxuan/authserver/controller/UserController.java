@@ -4,8 +4,6 @@ import com.yianyouxuan.authserver.domain.User;
 import com.yianyouxuan.authserver.repository.UserRepository;
 import com.yianyouxuan.authserver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -27,13 +25,11 @@ public class UserController {
 		return principal;
 	}
 
-	@PreAuthorize("#oauth2.hasScope('read')")
 	@GetMapping
 	public List<User> getUsers(){
 		return userRepository.findAll();
 	}
 
-	@PreAuthorize("#oauth2.hasScope('write')")
 	@RequestMapping(method = RequestMethod.POST)
 	public void createUser(@Valid @RequestBody User user) {
 		userService.create(user);
