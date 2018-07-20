@@ -1,4 +1,4 @@
-package com.yianyouxuan.authserver;
+package com.yianyouxuan.authserver.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Res
 
 @Configuration
 @EnableResourceServer
-public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
+public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
     private static final String RESOURCE_ID = "user-rest-api";
     private static final String SECURED_READ_SCOPE = "#oauth2.hasScope('read')";
