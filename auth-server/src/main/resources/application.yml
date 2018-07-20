@@ -9,3 +9,15 @@ spring:
       port: 27017
   application:
     name: auth-server
+
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+
+logging:
+  level:
+    org.springframework.security: DEBUG

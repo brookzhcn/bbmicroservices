@@ -13,4 +13,26 @@ Content-Type: application/json
 ###
 GET http://localhost:7001/users
 
+
+###
+POST acme:acmesecret@localhost:7001/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+
+
+#{
+#    "grant_type": "client_credentials",
+#    "scope":"server"
+#}
+
+###
+GET acme:acmesecret@localhost:7001/oauth/token?grant_type=client_credentials
+
+###
+POST http://localhost:7001/oauth/check_token
+Content-Type: application/x-www-form-urlencoded
+
+token = 8d75ae42-d394-4723-acef-7b36869bba89
+
 ###
