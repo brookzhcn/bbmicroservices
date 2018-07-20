@@ -12,27 +12,24 @@ Content-Type: application/json
 
 ###
 GET http://localhost:7001/users
-Authorization: Bear 6066d561-0bbe-47df-bb05-aec8cd679cb1
+Authorization: Bearer 8855260b-787a-4435-8ad8-69abbe757957
 
 
-###
+### client_credentials
 POST acme:acmesecret@localhost:7001/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=client_credentials&scope=read
 
-###
+### client_credentials
 POST bb:12345@localhost:7001/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=client_credentials&scope=write
-#{
-#    "grant_type": "client_credentials",
-#    "scope":"server"
-#}
 
-###
-POST acme:acmesecret@localhost:7001/oauth/token
+
+### password
+POST ui:12345@localhost:7001/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=password&username=brook&password=fighting
@@ -45,5 +42,9 @@ POST http://localhost:7001/oauth/check_token
 Content-Type: application/x-www-form-urlencoded
 
 token = 8d75ae42-d394-4723-acef-7b36869bba89
+
+### get current users
+GET http://localhost:7001/users/current
+Authorization: Bearer 7ceb3826-acd3-48b4-8827-566522e3b68d
 
 ###

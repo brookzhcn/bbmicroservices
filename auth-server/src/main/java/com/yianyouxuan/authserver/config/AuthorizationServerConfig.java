@@ -48,6 +48,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 .secret(passwordEncoder().encode("12345"))
                 .authorizedGrantTypes("client_credentials", "client_credentials")
                 .scopes("read", "write")
+        .and()
+                .withClient("ui")
+                .secret(passwordEncoder().encode("12345"))
+                .authorizedGrantTypes("password")
+                .scopes("read", "write")
         ;
         // @formatter:on
     }
@@ -56,7 +61,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
                 .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("permitAll()");
+                .checkTokenAccess("isAuthenticated()");
     }
 
     @Bean
