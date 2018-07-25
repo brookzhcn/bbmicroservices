@@ -1,7 +1,9 @@
-GET http://localhost:7000/messages/5b4db8b97584f2b9192d935a
+###
+GET http://localhost:7000/messages/5b4dc45b7584f2b9192d935b
 
 ###
 GET http://localhost:7000/messages
+Authorization: Bearer fab62977-807c-4313-a123-290eee0e27cb
 
 ###
 POST http://localhost:7000/messages
@@ -14,7 +16,7 @@ Content-Type: application/json
 }
 
 ### send message
-POST http://localhost:7000/messages/5b4db8b97584f2b9192d935a
+POST http://localhost:7000/messages/5b4dc45b7584f2b9192d935b
 
 ### delete message
 DELETE http://localhost:7000/messages/5b4db8b97584f2b9192d935a

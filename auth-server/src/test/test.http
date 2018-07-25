@@ -1,5 +1,10 @@
 ###
 GET http://localhost:7001/users/current
+Authorization: Bearer c26af391-3486-468f-8a52-c96c0993a6b5
+
+###
+GET http://localhost:7001/oauth/check_token?token=bd97448e-3cd2-4289-a183-67bf4103f08a
+
 
 ###
 POST http://localhost:7001/users
@@ -12,7 +17,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:7001/users
-Authorization: Bearer 8855260b-787a-4435-8ad8-69abbe757957
+Authorization: Bearer fab62977-807c-4313-a123-290eee0e27cb
 
 
 ### client_credentials
@@ -38,10 +43,10 @@ grant_type=password&username=brook&password=fighting
 GET acme:acmesecret@localhost:7001/oauth/token?grant_type=client_credentials
 
 ###
-POST http://localhost:7001/oauth/check_token
+POST http://localhost:7001/oauth/check_token?token = c26af391-3486-468f-8a52-c96c0993a6b5
 Content-Type: application/x-www-form-urlencoded
 
-token = 8d75ae42-d394-4723-acef-7b36869bba89
+
 
 ### get current users
 GET http://localhost:7001/users/current

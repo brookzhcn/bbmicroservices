@@ -6,15 +6,13 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-//import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.Executor;
 
-//@RestController
 @EnableDiscoveryClient
 @SpringBootApplication
 @EnableAsync
-public class MessageApplication {
+public class MessageApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(MessageApplication.class, args);
