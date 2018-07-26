@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   config:
-    image: brook/bbmicroservice-config
+    image: brookzhang/bbmicroservice-config
     restart: always
     logging:
       options:
@@ -9,7 +9,7 @@ services:
         max-file: "10"
 
   registry:
-    image: brook/bbmicroservice-registry
+    image: brookzhang/bbmicroservice-registry
     restart: always
     depends_on:
       config:
@@ -22,7 +22,7 @@ services:
         max-file: "10"
 
   gateway:
-    image: brook/bbmicroservice-gateway
+    image: brookzhang/bbmicroservice-gateway
     restart: always
     depends_on:
       config:
@@ -35,7 +35,7 @@ services:
         max-file: "10"
 
   auth-server:
-    image: brook/bbmicroservice-auth-server
+    image: brookzhang/bbmicroservice-auth-server
     restart: always
     depends_on:
       config:
@@ -46,7 +46,7 @@ services:
         max-file: "10"
 
   auth-mongodb:
-    image: brook/bbmicroservices-mongodb
+    image: brookzhang/bbmicroservices-mongodb
     restart: always
     logging:
       options:
@@ -54,7 +54,7 @@ services:
         max-file: "10"
 
   message:
-    image: brook/bbmicroservices-message
+    image: brookzhang/bbmicroservices-message
     restart: always
     depends_on:
       config:
@@ -65,7 +65,7 @@ services:
         max-file: "10"
 
   message-mongodb:
-    image: brook/bbmicroservices-mongodb
+    image: brookzhang/bbmicroservices-mongodb
     restart: always
     logging:
       options:
