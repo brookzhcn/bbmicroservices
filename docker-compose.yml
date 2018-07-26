@@ -1,5 +1,5 @@
 version: '1.0'
-
+services:
   config:
     image: brook/bbmicroservice-config
     restart: always
