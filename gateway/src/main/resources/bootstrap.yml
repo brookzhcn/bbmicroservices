@@ -5,3 +5,14 @@ spring:
     config:
       uri: http://config:8888
       fail-fast: true
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
+  instance:
+    hostname: localhost
+
