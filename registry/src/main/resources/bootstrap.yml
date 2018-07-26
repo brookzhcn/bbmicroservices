@@ -1,9 +1,10 @@
 spring:
   application:
     name: registry
-
-server:
-  port: 8761
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
 
 eureka:
   instance:
