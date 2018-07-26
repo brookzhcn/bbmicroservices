@@ -45,13 +45,13 @@ services:
         max-size: "10m"
         max-file: "10"
 
-  auth-mongodb:
-    image: brookzhang/bbmicroservices-mongodb
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  auth-mongodb:
+#    image: brookzhang/bbmicroservices-mongodb
+#    restart: always
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
   message:
     image: brookzhang/bbmicroservices-message
@@ -64,11 +64,11 @@ services:
         max-size: "10m"
         max-file: "10"
 
-  message-mongodb:
-    image: brookzhang/bbmicroservices-mongodb
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  message-mongodb:
+#    image: brookzhang/bbmicroservices-mongodb
+#    restart: always
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
