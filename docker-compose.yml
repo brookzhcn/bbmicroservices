@@ -3,6 +3,8 @@ services:
   config:
     image: brookzhang/bbmicroservice-config
     restart: always
+    ports:
+      - 8888:8888
     logging:
       options:
         max-size: "10m"
@@ -28,22 +30,22 @@ services:
       config:
         condition: service_healthy
     ports:
-      - 80:4000
+      - 8000:4000
     logging:
       options:
         max-size: "10m"
         max-file: "10"
 
-  auth-server:
-    image: brookzhang/bbmicroservice-auth-server
-    restart: always
-    depends_on:
-      config:
-        condition: service_healthy
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  auth-server:
+#    image: brookzhang/bbmicroservice-auth-server
+#    restart: always
+#    depends_on:
+#      config:
+#        condition: service_healthy
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
 #  auth-mongodb:
 #    image: brookzhang/bbmicroservices-mongodb
@@ -53,16 +55,16 @@ services:
 #        max-size: "10m"
 #        max-file: "10"
 
-  message:
-    image: brookzhang/bbmicroservices-message
-    restart: always
-    depends_on:
-      config:
-        condition: service_healthy
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+#  message:
+#    image: brookzhang/bbmicroservices-message
+#    restart: always
+#    depends_on:
+#      config:
+#        condition: service_healthy
+#    logging:
+#      options:
+#        max-size: "10m"
+#        max-file: "10"
 
 #  message-mongodb:
 #    image: brookzhang/bbmicroservices-mongodb
