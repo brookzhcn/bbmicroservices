@@ -1,0 +1,57 @@
+###
+GET http://localhost:5000/users
+Authorization: Bearer 2a574907-67b9-4102-9b71-1ea25a39425e
+
+###
+GET http://localhost:5000/oauth/check_token?token=2a574907-67b9-4102-9b71-1ea25a39425e
+
+
+
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username":"brook",
+    "password":"fighting"
+}
+
+###
+GET http://localhost:5000/users/current
+Authorization: Bearer 2a574907-67b9-4102-9b71-1ea25a39425e
+
+
+### client_credentials
+POST account-service:12345@localhost:5000/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&scope=server
+
+### client_credentials
+POST bb:12345@localhost:7001/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&scope=write
+
+
+### password
+POST ui:12345@localhost:7001/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username=brook&password=fighting
+
+###
+GET acme:acmesecret@localhost:7001/oauth/token?grant_type=client_credentials
+
+###
+POST http://localhost:7001/oauth/check_token?token = c26af391-3486-468f-8a52-c96c0993a6b5
+Content-Type: application/x-www-form-urlencoded
+
+
+
+### get current users
+GET http://localhost:7001/users/current
+Authorization: Bearer 7ceb3826-acd3-48b4-8827-566522e3b68d
+
+###
