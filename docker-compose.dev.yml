@@ -21,8 +21,8 @@ services:
 #    ports:
 #      - 25000:27017
 
-#  message:
-#    build: message
+  message:
+    build: message
 
 
 #  message-mongodb:
