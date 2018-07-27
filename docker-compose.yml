@@ -58,8 +58,6 @@ services:
     environment:
       MONGODB_PASSWORD: 12345
     restart: always
-    ports:
-      - 7000:7000
     depends_on:
       config:
         condition: service_healthy
@@ -74,8 +72,7 @@ services:
       INIT_DUMP: message-service-dump.js
       MONGODB_PASSWORD: 12345
     restart: always
-    ports:
-      - 26000:27017
+
     logging:
       options:
         max-size: "10m"

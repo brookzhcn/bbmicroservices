@@ -23,8 +23,12 @@ services:
 
   message:
     build: message
+    ports:
+      - 7000:7000
 
 
   message-mongodb:
     build: mongodb
+    ports:
+      - 26000:27017
 
