@@ -21,11 +21,10 @@ services:
 #    ports:
 #      - 25000:27017
 
-  message:
-    build: message
+#  message:
+#    build: message
 
 
-  message-mongodb:
-    build: mongodb
-    ports:
-      - 26000:27017
+#  message-mongodb:
+#    build: mongodb
+
