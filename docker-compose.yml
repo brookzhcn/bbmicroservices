@@ -67,7 +67,7 @@ services:
         max-file: "10"
 
   message-mongodb:
-    image: mongo
+    image: brookzhang/bbmicroservices-mongodb
     restart: always
     ports:
       - 26000:27017

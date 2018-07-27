@@ -5,6 +5,13 @@ ADD init.sh /init.sh
 ADD ./dump /
 
 RUN \
+ echo "deb http://mirrors.aliyun.com/debian wheezy main contrib non-free
+       deb-src http://mirrors.aliyun.com/debian wheezy main contrib non-free
+       deb http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free
+       deb-src http://mirrors.aliyun.com/debian wheezy-updates main contrib non-free
+       deb http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free
+       deb-src http://mirrors.aliyun.com/debian-security wheezy/updates main contrib non-free"
+       > /etc/apt/sources.list && \
  chmod +x /init.sh && \
  apt-get update && apt-get dist-upgrade -y && \
  apt-get install psmisc -y -q && \

@@ -25,6 +25,6 @@ services:
     build: message
 
 
-#  message-mongodb:
-#    build: mongodb
+  message-mongodb:
+    build: mongodb
 
