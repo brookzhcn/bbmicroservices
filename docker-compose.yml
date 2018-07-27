@@ -55,6 +55,8 @@ services:
 
   message:
     image: brookzhang/bbmicroservices-message
+    environment:
+      MONGODB_PASSWORD: 12345
     restart: always
     ports:
       - 7000:7000
@@ -68,12 +70,12 @@ services:
 
   message-mongodb:
     image: brookzhang/bbmicroservices-mongodb
+    environment:
+      INIT_DUMP: message-service-dump.js
+      MONGODB_PASSWORD: 12345
     restart: always
     ports:
       - 26000:27017
-    environment:
-          MONGO_INITDB_ROOT_USERNAME: user
-          MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
     logging:
       options:
         max-size: "10m"
