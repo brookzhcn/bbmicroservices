@@ -34,24 +34,32 @@ services:
         max-size: "10m"
         max-file: "10"
 
-#  auth-server:
-#    image: brookzhang/bbmicroservice-auth-server
-#    restart: always
-#    depends_on:
-#      config:
-#        condition: service_healthy
-#    logging:
-#      options:
-#        max-size: "10m"
-#        max-file: "10"
+  auth-service:
+    environment:
+      CONFIG_SERVICE_PASSWORD: 12345
+      NOTIFICATION_SERVICE_PASSWORD: 12345
+      STATISTICS_SERVICE_PASSWORD: 12345
+      ACCOUNT_SERVICE_PASSWORD: 12345
+      MONGODB_PASSWORD: 12345
+    image: brookzhang/bbmicroservices-auth-service
+    restart: always
+    depends_on:
+      config:
+        condition: service_healthy
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
 
-#  auth-mongodb:
-#    image: brookzhang/bbmicroservices-mongodb
-#    restart: always
-#    logging:
-#      options:
-#        max-size: "10m"
-#        max-file: "10"
+  auth-mongodb:
+    environment:
+      MONGODB_PASSWORD: 12345
+    image: brookzhang/bbmicroservices-mongodb
+    restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
 
   message:
     image: brookzhang/bbmicroservices-message

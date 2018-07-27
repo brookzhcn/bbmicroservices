@@ -1,6 +1,6 @@
 ###
-GET http://localhost:5000/users
-Authorization: Bearer 2a574907-67b9-4102-9b71-1ea25a39425e
+GET http://localhost:5000/uaa/users
+Authorization: Bearer  136e94e4-e266-43cf-a263-e83f7e0542eb
 
 ###
 GET http://localhost:5000/oauth/check_token?token=2a574907-67b9-4102-9b71-1ea25a39425e
@@ -23,7 +23,7 @@ Authorization: Bearer 2a574907-67b9-4102-9b71-1ea25a39425e
 
 
 ### client_credentials
-POST account-service:12345@localhost:5000/oauth/token
+POST account-service:12345@localhost:5000/uaa/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=client_credentials&scope=server
