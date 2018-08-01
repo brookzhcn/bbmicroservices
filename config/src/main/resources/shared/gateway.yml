@@ -15,6 +15,12 @@ zuul:
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000
+  routes:
+    auth-service:
+        path: /uaa/**
+        url: http://auth-service:5000
+        stripPrefix: false
+        sensitiveHeaders:
 
 server:
   port: 4000

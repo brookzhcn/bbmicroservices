@@ -4,16 +4,16 @@ Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
 
 ###
 GET http://localhost:7000/messages
-Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
+Authorization: Bearer 4b164072-d954-4eaa-98f2-eb8cd66a90c1
 
 ###
 POST http://localhost:7000/messages
 Content-Type: application/json
-Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
+Authorization: Bearer 4b164072-d954-4eaa-98f2-eb8cd66a90c1
 
 {
   "receivers": ["133000000","13913005642"],
-  "content": "just a content 5",
+  "content": "just a content 6",
   "sender": "bb"
 }
 
