@@ -52,7 +52,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
                 .scopes("server")
                 .and()
                 .withClient("message-service")
-                .secret(env.getProperty("MESSAGE_SERVICE_PASSWORD"))
+                .secret("12345")
                 .authorizedGrantTypes("client_credentials", "refresh_token")
                 .scopes("server")
                 .and()

@@ -19,17 +19,12 @@ eureka:
   instance:
     hostname: localhost
 
-
 security:
   oauth2:
     client:
       clientId: message-service
       clientSecret: 12345
       accessTokenUri: http://localhost:5000/uaa/oauth/token
-#      userInfoUri: http://localhost:5000/uaa/users/current
-      grant-type: client_credentialsz
+      userInfoUri: http://localhost:5000/uaa/users/current
+      grant-type: client_credentials
       scope: server
-    resource:
-        user-info-uri: http://localhost:5000/uaa/users/current
-
-debug: true

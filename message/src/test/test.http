@@ -1,13 +1,15 @@
 ###
 GET http://localhost:7000/messages/5b4dc45b7584f2b9192d935b
+Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
 
 ###
 GET http://localhost:7000/messages
-Authorization: Bearer fab62977-807c-4313-a123-290eee0e27cb
+Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
 
 ###
 POST http://localhost:7000/messages
 Content-Type: application/json
+Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
 
 {
   "receivers": ["133000000","13913005642"],
@@ -20,5 +22,11 @@ POST http://localhost:7000/messages/5b4dc45b7584f2b9192d935b
 
 ### delete message
 DELETE http://localhost:7000/messages/5b4db8b97584f2b9192d935a
+
+###
+POST message-service:12345@localhost:5000/uaa/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&scope=server
 
 ###
