@@ -17,3 +17,7 @@ security:
       userInfoUri: http://auth-service:5000/uaa/users/current
       grant-type: client_credentials
       scope: server
+
+dahan:
+  ribbon:
+    listOfServers: http://127.0.0.1:5000,http://www.dh3t.com
