@@ -12,7 +12,7 @@ Content-Type: application/json
 Authorization: Bearer af463f31-3efd-4c0f-9833-9c9a040ee2e2
 
 {
-  "receivers": ["133000000","13913005642"],
+  "receivers": ["13913005642"],
   "content": "just a content 6",
   "sender": "bb"
 }

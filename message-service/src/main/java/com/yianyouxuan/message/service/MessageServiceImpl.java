@@ -31,9 +31,6 @@ public class MessageServiceImpl implements MessageService {
         if(!message.isSent()) {
             try {
                 dahanService.sendMessage(message);
-                message.setDateSent(new Date());
-                message.setSent(true);
-                repository.save(message);
                 return true;
             } catch (InterruptedException exec) {
                 return false;
