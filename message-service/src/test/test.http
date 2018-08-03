@@ -4,12 +4,12 @@ Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
 
 ###
 GET http://localhost:7000/messages
-Authorization: Bearer 938d21ab-9cfa-4bde-9be1-ec630cc0c0a0
+Authorization: Bearer af463f31-3efd-4c0f-9833-9c9a040ee2e2
 
 ###
 POST http://localhost:7000/messages
 Content-Type: application/json
-Authorization: Bearer 938d21ab-9cfa-4bde-9be1-ec630cc0c0a0
+Authorization: Bearer af463f31-3efd-4c0f-9833-9c9a040ee2e2
 
 {
   "receivers": ["133000000","13913005642"],
@@ -18,8 +18,8 @@ Authorization: Bearer 938d21ab-9cfa-4bde-9be1-ec630cc0c0a0
 }
 
 ### send message
-POST http://localhost:7000/messages/5b61896811153f39603f094d
-Authorization: Bearer 938d21ab-9cfa-4bde-9be1-ec630cc0c0a0
+POST http://localhost:7000/messages/5b63c9dd7ed5573de8b44709
+Authorization: Bearer af463f31-3efd-4c0f-9833-9c9a040ee2e2
 
 ### delete message
 DELETE http://localhost:7000/messages/5b4db8b97584f2b9192d935a

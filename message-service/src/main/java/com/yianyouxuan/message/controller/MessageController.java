@@ -5,10 +5,8 @@ import com.yianyouxuan.message.exceptions.ResourceNotFoundException;
 import com.yianyouxuan.message.repository.MessageRepository;
 import com.yianyouxuan.message.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-
 //import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +21,10 @@ public class MessageController {
     @Autowired
     private MessageRepository messageRepository;
 
+
+    @Value("${dahan.config.sign}")
+    private String sign;
+
     @GetMapping(value = "/{messageId}")
     public Optional<Message> retrieveMessage(@PathVariable String messageId){
 
@@ -35,10 +37,9 @@ public class MessageController {
 
         Optional<Message> message = messageRepository.findById(messageId);
 
+        System.out.println(this.sign);
         if (message.isPresent()){
-            boolean status = messageService.send(message.get());
-            System.out.println(message);
-            return status;
+            return messageService.send(message.get());
         }else{
             throw new ResourceNotFoundException("message id not found");
         }
@@ -63,8 +64,9 @@ public class MessageController {
         return messageRepository.findByReceivers(receiver);
     }
     @PostMapping
-    public  ResponseEntity<String> add(@RequestBody Message message){
-        messageService.create(message);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+    public  Message add(@RequestBody Message message){
+        Message msg = messageService.create(message);
+        messageService.send(msg);
+        return msg;
     }
 }

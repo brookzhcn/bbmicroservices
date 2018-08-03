@@ -20,9 +20,10 @@ public class MessageServiceImpl implements MessageService {
     private DahanService dahanService;
 
     @Override
-    public void create(Message message) {
-        repository.save(message);
+    public Message create(Message message) {
+        Message msg = repository.save(message);
         log.info("new message has been created: {}", message);
+        return msg;
     }
 
     @Override

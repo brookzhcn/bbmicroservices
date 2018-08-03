@@ -21,3 +21,9 @@ security:
 dahan:
   ribbon:
     listOfServers: http://127.0.0.1:5000,http://www.dh3t.com
+  config:
+    sign: "【怡安翰威特】"
+    url: http://localhost:4000
+    password: cf833687fcf6b0e2f790492a19b53258
+    subcode: 41631
+    account: dh41631
