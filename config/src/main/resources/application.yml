@@ -8,5 +8,5 @@ spring:
      active: native
 
 server:
-  port: 8888
+  port: 7001
 

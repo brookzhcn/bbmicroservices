@@ -4,4 +4,4 @@ MAINTAINER Brook Zhang <brook.zhang@aon.com>
 ADD ./target/registry.jar /app/
 CMD ["java", "-Xmx200m", "-jar", "/app/registry.jar"]
 
-EXPOSE 8761
+EXPOSE 7003
