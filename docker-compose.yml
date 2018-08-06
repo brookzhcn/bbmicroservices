@@ -15,7 +15,7 @@ services:
       config:
         condition: service_healthy
     ports:
-      - 8761:8761
+      - 7003:7003
     logging:
       options:
         max-size: "10m"
@@ -28,7 +28,7 @@ services:
       config:
         condition: service_healthy
     ports:
-      - 8000:4000
+      - 7002:7002
     logging:
       options:
         max-size: "10m"
@@ -61,8 +61,8 @@ services:
         max-size: "10m"
         max-file: "10"
 
-  message:
-    image: brookzhang/bbmicroservices-message
+  message-service:
+    image: brookzhang/bbmicroservices-message-service
     environment:
       MONGODB_PASSWORD: 12345
     restart: always

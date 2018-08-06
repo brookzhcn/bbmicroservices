@@ -3,7 +3,7 @@ services:
   config:
     build: config
     ports:
-      - 8888:8888
+      - 7001:7001
 
   registry:
     build: registry
@@ -14,7 +14,7 @@ services:
   auth-service:
     build: auth-service
     ports:
-      - 5000:5000
+      - 7004:7004
 
   auth-mongodb:
     build: mongodb
@@ -24,7 +24,7 @@ services:
   message:
     build: message
     ports:
-      - 7000:7000
+      - 7005:7005
 
 
   message-mongodb:
