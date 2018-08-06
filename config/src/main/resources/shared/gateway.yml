@@ -18,9 +18,14 @@ zuul:
   routes:
     auth-service:
         path: /uaa/**
-        url: http://auth-service:5000
+        url: http://auth-service:7004
         stripPrefix: false
         sensitiveHeaders:
 
+    message-service:
+        path: /messages/**
+        serviceId: message-service
+        stripPrefix: false
+        sensitiveHeaders:
 server:
   port: 7002

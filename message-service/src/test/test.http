@@ -3,13 +3,13 @@ GET http://localhost:7000/messages/5b4dc45b7584f2b9192d935b
 Authorization: Bearer c256eb81-8f06-4e3e-a6c3-bdad17f44542
 
 ###
-GET http://localhost:7002/message-service/messages
+GET http://localhost:7002/messages/messages
 Authorization: Bearer 8b46838f-82ab-4d0a-a264-e4d11a760300
 
 ###
-POST http://localhost:7000/messages
+POST http://localhost:7002/messages/messages
 Content-Type: application/json
-Authorization: Bearer af463f31-3efd-4c0f-9833-9c9a040ee2e2
+Authorization: Bearer 8b46838f-82ab-4d0a-a264-e4d11a760300
 
 {
   "receivers": ["13913005642"],
@@ -25,7 +25,7 @@ Authorization: Bearer af463f31-3efd-4c0f-9833-9c9a040ee2e2
 DELETE http://localhost:7000/messages/5b4db8b97584f2b9192d935a
 
 ### get token for message service
-POST message-service:12345@localhost:7004/uaa/oauth/token
+POST message-service:12345@localhost:7002/uaa/oauth/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=client_credentials&scope=server
